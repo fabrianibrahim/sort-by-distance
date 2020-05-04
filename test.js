@@ -1,8 +1,8 @@
-const sortByDistance = require('./index')
+const sortDistance = require('./index')
 
-describe('sort by distance', () => {
+describe('sort distance', () => {
   it('should be a function', () => {
-    expect(typeof sortByDistance).toBe('function')
+    expect(typeof sortDistance).toBe('function')
   })
 
   it('should return the sorted array', () => {
@@ -15,7 +15,7 @@ describe('sort by distance', () => {
     ]
 
     const origin = { x: 50, y: 50 }
-    const nearest = { x: 80, y: 34, distance: 34 }
-    expect(sortByDistance(origin, points)[0]).toEqual(nearest)
+    const nearest = { x: 80, y: 34 }
+    expect(sortDistance(origin, points)[0]).toEqual(nearest)
   })
 })
