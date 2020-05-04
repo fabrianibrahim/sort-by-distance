@@ -12,7 +12,7 @@ function getDistanceX (p1, p2, name) {
   return (get(p1, name.x) - get(p2, name.x)) * (get(p1, name.x) - get(p2, name.x));
 }
 
-function sortDistance (origin, points, opts = {}) {
+function sortDistance (origin, points, opts) {
   if (!origin || !points || !Array.isArray(points)) {
     console.warn('An origin and array points must be provided');
     return null;
