@@ -19,17 +19,17 @@ function sortDistance (origin, points, opts) {
   }
 
   var names = {
-    y: opts.yName || 'y',
-    x: opts.xName || 'x'
+    y: opts && opts.yName ? opts.yName : 'y',
+    x: opts && opts.xName ? opts.xName : 'x'
   };
 
   var newPoints = points.slice();
 
   newPoints.sort(function (a, b) {
-    var distanceA = distanceBetweenPoints(origin, a, names)
-    var distanceB = distanceBetweenPoints(origin, b, names)
+    a.distance = distanceBetweenPoints(origin, a, names)
+    b.distance = distanceBetweenPoints(origin, b, names)
 
-    return distanceA - distanceB;
+    return a.distance - b.distance;
   })
 
   return newPoints;

@@ -15,7 +15,7 @@ describe('sort distance', () => {
     ]
 
     const origin = { x: 50, y: 50 }
-    const nearest = { x: 80, y: 34 }
+    const nearest = { x: 80, y: 34, distance: 34 }
     expect(sortDistance(origin, points)[0]).toEqual(nearest)
   })
 })

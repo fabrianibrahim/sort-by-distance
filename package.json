@@ -1,6 +1,6 @@
 {
   "name": "sort-distance",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Sort array of points based on how close they are to a givin point",
   "license": "MIT",
   "main": "index.js",
